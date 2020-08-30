@@ -4,7 +4,7 @@ class Log{
             isStatic:false
         }
         this.image = loadImage("log.png");
-        this.body = Bodies.rectangle(x,y,width,height);
+        this.body = Bodies.rectangle(x,y,width,height,options);
         this.width = width;
         this.height = height;
         World.add(world,this.body);
