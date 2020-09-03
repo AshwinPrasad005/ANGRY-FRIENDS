@@ -6,7 +6,7 @@ class Pig{
         this.image = loadImage("pig.png");
         this.body = Bodies.circle(x,y,radius,options);
         this.radius = radius;
-        World.add(woorld,this.body);
+        World.add(world,this.body);
     }
     display(){
         var pos = this.body.position;
