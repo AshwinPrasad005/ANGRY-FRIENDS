@@ -1,5 +1,5 @@
 class Pig{
-    construtor(x,y,radius){
+    constructor(x,y,radius){
         var options={
             isStatic:false
         }
@@ -15,7 +15,7 @@ class Pig{
         translate(pos.x,pos.y);
         rotate(angle);
         imageMode(CENTER);
-        image(this.image,0,0,this.radius);
+        image(this.image,0,0,this.radius,this.radius);
         pop();
     }
 }
