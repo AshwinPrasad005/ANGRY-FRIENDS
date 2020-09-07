@@ -26,7 +26,8 @@ function setup() {
 	box4 = new Box(575,400,75,75);
 	log2 = new Log(475,375,300,10);
 
-	 pig1 = new Pig(475,500,30);
+	pig1 = new Pig(475,500,30);
+	pig2 = new Pig(475,400,30)
   
 }
 
@@ -44,6 +45,7 @@ function draw() {
   log2.display();
 
   pig1.display();
+  pig2.display();
   
   drawSprites();
  
