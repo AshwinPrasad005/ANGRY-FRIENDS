@@ -3,7 +3,7 @@ class Bird{
         var options={
             isStatic:false
         }
-        this.image = loadImage("bird.png");
+        this.image = loadImage("character.png");
         this.body = Bodies.rectangle(x,y,width,height,options);
         this.width = width;
         this.height = height;
