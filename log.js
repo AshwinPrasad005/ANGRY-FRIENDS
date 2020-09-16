@@ -3,9 +3,10 @@ class Log{
         var options={
             isStatic:false
         }
-        Matter.Body.setAngle(this.body, angle);
         this.image = loadImage("log.png");
-        this.body = Bodies.rectangle(x,y,width,height,options);
+        this.body = Bodies.rectangle(x,y,width,height,angle,options);
+        Matter.Body.setAngle(this.body, angle);
+        this.angle = angle
         this.width = width;
         this.height = height;
         World.add(world,this.body);

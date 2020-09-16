@@ -20,11 +20,11 @@ function setup() {
 	ground = new Ground(300,595,600,10);
 	box1 = new Box(350,500,75,75);
 	box2 = new Box(550,500,75,75);
-	log1 = new Log(450,475,300,10,PI/7);
+	log1 = new Log(450,475,300,10,PI/16);
 
 	box3 = new Box(350,400,75,75);
 	box4 = new Box(550,400,75,75);
-	log2 = new Log(450,375,300,10,PI/7);
+	log2 = new Log(450,375,300,10,PI/16);
 
 	pig1 = new Pig(450,500,40,40);
 	pig2 = new Pig(450,400,40,40);
