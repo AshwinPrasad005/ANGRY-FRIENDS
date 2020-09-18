@@ -32,7 +32,8 @@ function setup() {
 	bird1 = new Bird(250,400,50,75);
 
 	box5 = new Box(450,300,75,75);
-	log1A = new Log(400,300,150,10,PI/2);
+	log1A = new Log(400,275,150,10,PI/9);
+	log2A = new Log(500,275,150,10,PI/-9)
   
 }
 
@@ -55,9 +56,8 @@ function draw() {
 
   box5.display();
   log1A.display();
-  
-  drawSprites();
- 
+  log2A.display();
+
 }
 
 
