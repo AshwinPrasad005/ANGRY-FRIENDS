@@ -1,4 +1,4 @@
-var engine,world,ground,box1,box2,log1,box3,box4,log2,pig1,pig2,bird1,log1A,log2A,box5;
+var engine,world,ground,box1,box2,log1,box3,box4,log2,pig1,pig2,bird1,log1A,log2A,box5,sling1;
 
 const Engine = Matter.Engine;
 const World = Matter.World;
@@ -33,7 +33,9 @@ function setup() {
 
 	box5 = new Box(450,300,75,75);
 	log1A = new Log(400,275,150,10,PI/9);
-	log2A = new Log(500,275,150,10,PI/-9)
+	log2A = new Log(500,275,150,10,PI/-9);
+
+	sling1 = new Sling(bird1,{x:200,y:200});
   
 }
 
