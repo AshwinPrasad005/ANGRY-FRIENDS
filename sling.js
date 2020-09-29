@@ -22,7 +22,7 @@ class Sling{
     display(){
         if(this.sling.bodyA){
             var pointA = this.sling.bodyA.position;
-            var pointB = this.pointB;
+            var pointB = this.sling.pointB;
             push();
             stroke(48,22,8);
             if(pointA.x<220){

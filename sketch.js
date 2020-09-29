@@ -1,9 +1,12 @@
-var engine,world,ground,box1,box2,log1,box3,box4,log2,pig1,pig2,bird1,log1A,log2A,box5,sling1;
+var engine,world,ground,box1,box2,log1,box3,box4,log2,pig1,pig2,bird1,log1A,log2A,box5,sling1,gameState;
 
 const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Body = Matter.Body;
+const Constraint = Matter.Constraint;
+
+gameState = "attached"
 
 function preload()
 {
@@ -35,7 +38,7 @@ function setup() {
 	log1A = new Log(400,275,150,10,PI/9);
 	log2A = new Log(500,275,150,10,PI/-9);
 
-	sling1 = new Sling(bird1,{x:200,y:200});
+	sling1 = new Sling(bird1.body,{x:200,y:200});
   
 }
 
@@ -60,6 +63,24 @@ function draw() {
   log1A.display();
   log2A.display();
 
+}
+
+function mouseDragged(){
+	if(gameState!== "shoot"){
+		Matter.Body.setPosition(bird1.body, {x: mouseX , y: mouseY});
+	}
+}
+
+function mouseReleased(){
+	sling1.shoot();
+	gameState = "shoot"
+}
+
+function keyPressed(){
+	if(keyCode === 32){
+		sling1.attach(bird1.body);
+		gameState = "attached";
+	}
 }
 
 
