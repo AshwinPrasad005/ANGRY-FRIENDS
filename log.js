@@ -7,7 +7,7 @@ class Log{
             friction:1.0
         }
         this.image = loadImage("log.png");
-        this.body = Bodies.rectangle(x,y,width,height,angle,options);
+        this.body = Bodies.rectangle(x,y,width,height,options);
         Matter.Body.setAngle(this.body, angle);
         this.angle = angle
         this.width = width;
