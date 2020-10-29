@@ -22,7 +22,6 @@ class Pig{
         rotate(angle);
         imageMode(CENTER);
         image(this.image,0,0,this.width,this.height);
-        pop();
         }
         else{
             World.remove(world, this.body);
@@ -30,5 +29,6 @@ class Pig{
             this.Visiblity = this.Visiblity - 5;
             tint(255,this.Visiblity);
         }
+        pop();
     }
 }
