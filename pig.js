@@ -14,8 +14,8 @@ class Pig{
         World.add(world,this.body);
     }
     display(){
-        if(this.body.speed < 3){
-            var pos = this.body.position;
+        if(this.body.speed < 5){
+        var pos = this.body.position;
         var angle = this.body.angle;
         push();
         translate(pos.x,pos.y);
@@ -28,6 +28,8 @@ class Pig{
             push();
             this.Visiblity = this.Visiblity - 5;
             tint(255,this.Visiblity);
+            imageMode(CENTER);
+            image(this.image,0,0,this.width,this.height);
         }
         pop();
     }
